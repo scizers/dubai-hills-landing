@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body;
+}
+.heading {
+  @apply font-heading;
+}
+.container {
+  width: 83%;
+  max-width: 1619px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  @apply font-heading;
+  font-size: 56px;
+  line-height: 69.8px;
+}
+
+h2 {
+  @apply font-heading;
+  font-size: 42px;
+  line-height: 46.8px;
+}
+
+h3 {
+  @apply font-heading;
+  font-size: 28px;
+  line-height: 32.4px;
+}
+
+h4 {
+  @apply font-heading;
+  font-size: 16px;
+  line-height: 23.7px;
+}
+
+.p1 {
+  font-size: 28px;
+  line-height: 23.74px;
+}
+
+.p2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.p3 {
+  font-size: 14px;
+  line-height: 16.94px;
+}
+
+.p3-light {
+  font-size: 14px;
+  line-height: auto;
+}
+
+.button-text {
+  font-size: 18px;
+  line-height: 14.39px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    line-height: 32.38px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32.38px;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 23.7px;
+  }
+
+  .p1 {
+    font-size: 16px;
+    line-height: 34.32px;
+  }
+
+  .p2 {
+    font-size: 14px;
+    line-height: 18.3px;
+  }
+
+  .p3 {
+    font-size: 12px;
+    line-height: 14.68px;
+  }
+}
+.formComp {
+  @apply w-full;
+
+  .inputStyle {
+    @apply p-4 w-full h-[50px] text-grayText  outline-none  text-[14px] bg-white  rounded-[2.6875rem] border border-[#BFBFBF]  placeholder:text-[14px] placeholder:font-light placeholder:tracking-[0.05em] placeholder:text-grayText;
+  }
+  .inputStyle:focus {
+    @apply text-grayText bg-white;
+  }
+  .phoneStyle {
+    @apply border-y  border-r p-4 w-full h-[38px] outline-none text-grayText text-[14px] bg-white  placeholder:text-[14px] placeholder:font-light placeholder:tracking-[0.05em] placeholder:text-grayText;
+  }
+  .preferredModeOfContact {
+    input {
+      @apply mr-1;
+    }
+
+    & > div > div {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.lightForm {
+  @apply w-full;
+
+  .inputStyle {
+    @apply p-4 w-full h-[52px] text-grayText  outline-none  text-[14px] bg-transparent  rounded-[2.6875rem] border border-[#B5B5B5]  placeholder:text-[14px] placeholder:font-light placeholder:tracking-[0.05em] placeholder:text-grayText;
+  }
+  .inputStyle:focus {
+    @apply bg-transparent text-grayText;
+  }
+  .phoneStyle {
+    @apply border-y  border-r p-4 w-full h-[38px] outline-none text-grayText text-[14px]     bg-transparent placeholder:text-[14px] placeholder:font-light placeholder:tracking-[0.05em] placeholder:text-grayText;
+  }
+  .preferredModeOfContact {
+    input {
+      @apply mr-1;
+    }
+
+    & > div > div {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
