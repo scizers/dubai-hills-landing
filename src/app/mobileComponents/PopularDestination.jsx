@@ -27,9 +27,6 @@ const PopularDestination = () => {
               {location.text} <br />
               {location.name}
             </p>
-
-            {/* <div className="h-px mx-4 bg-grayText w-[25px]" />
-            <h4 className="p2 font-heading text-darkBlue">{location.name}</h4> */}
           </div>
         ))}
       </div>

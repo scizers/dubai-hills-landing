@@ -5,6 +5,7 @@ import backgroundImage from "../../images/hero/heroMob.png";
 import ContactForm, { LinkButtonComp } from "./ContactForm";
 import Image from "next/image";
 import logo from "../../images/logo.png";
+import whatsappChat from "../../images/whatsapp.png";
 
 export default function HeroSection() {
   const [load, setLoad] = useState(false);
@@ -41,11 +42,9 @@ export default function HeroSection() {
           </h1>
           <div className=" bg-white rounded-[18px] lg:w-[50%] mx-auto">
             <div className="flex flex-col items-center justify-center w-[90%] m-auto h-full gap-2 py-4">
-              {/* <div className="relative top-0 flex flex-col items-center justify-center w-full gap-2"> */}
               <h3 className="z-50 text-center uppercase text-darkBlue">
                 Register Your Interest
               </h3>
-              {/* </div> */}
               <div className="flex flex-col items-center justify-center w-full ">
                 <div className="w-full">
                   <ContactForm
@@ -64,10 +63,23 @@ export default function HeroSection() {
                   {load ? "SUBMITTING..." : "Submit"}
                 </label>
 
-                <div className="text-grayText text-[10px] font-light my-4">
+                <div className="text-grayText text-[10px] font-light mt-4 mb-2">
                   By submitting this form, you’re confirming that you agree to
                   our Privacy Policy
                 </div>
+                <a
+                  id={"waLink"}
+                  href="https://api.whatsapp.com/send/?phone=18106769485&text=Hi%2C+I+want+to+know+more+about+Dubai+Hills&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={whatsappChat}
+                    width={178}
+                    height={36}
+                    alt="whatapp bot"
+                  />
+                </a>
               </div>
             </div>
           </div>

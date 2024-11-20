@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
 import ContactForm from "./ContactForm";
 import Image from "next/image";
+import whatsappChat from "../../images/whatsapp.png";
 
 const Popup = () => {
   const [load, setLoad] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const router = useRouter();
+
   const hasOpenedPopup = useRef(false);
 
   useEffect(() => {
@@ -27,7 +27,6 @@ const Popup = () => {
   const closePopup = (e) => {
     e.preventDefault();
     setShowPopup(false);
-    router.push("/");
   };
 
   return (
@@ -87,6 +86,19 @@ const Popup = () => {
                   By submitting this form, you’re confirming that you agree to
                   our Privacy Policy
                 </div>
+                <a
+                  id={"waLink"}
+                  href="https://api.whatsapp.com/send/?phone=18106769485&text=Hi%2C+I+want+to+know+more+about+Dubai+Hills&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={whatsappChat}
+                    width={178}
+                    height={36}
+                    alt="whatapp bot"
+                  />
+                </a>
               </div>
             </div>
           </div>

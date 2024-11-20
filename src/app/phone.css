@@ -978,7 +978,6 @@
     padding-left: 38px;
     margin-left: 0;
     background: #ffffff;
-    /* border: 1px solid #181818b2; */
 
     height: 35px;
     width: 300px;
@@ -1048,7 +1047,6 @@
     width: 38px;
     margin: 2px;
     height: 90%;
-    /* padding: 0 0 0 8px; */
     border-radius: 3px 0 0 3px;
 
     &:hover {

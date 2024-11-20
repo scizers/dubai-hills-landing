@@ -1,12 +1,11 @@
 "use client";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import backgroundImage from "../../images/hero/hero.jpg";
-import ContactForm, {
-  LinkButtonComp,
-} from "@/app/mobileComponents/ContactForm";
+import ContactForm from "@/app/mobileComponents/ContactForm";
 import Image from "next/image";
 import logo from "../../images/logoDesk.png";
 import emaar from "../../images/emaar.png";
+import whatsappChat from "../../images/whatsapp.png";
 
 export default function HeroSection() {
   const [load, setLoad] = useState(false);
@@ -20,7 +19,6 @@ export default function HeroSection() {
         priority="true"
         className="object-cover"
       />
-      {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-60"></div> */}
 
       <div className="container relative top-0 flex justify-center mt-20 ">
         <Image
@@ -81,10 +79,24 @@ export default function HeroSection() {
                   {load ? "SUBMITTING..." : "Submit"}
                 </label>
 
-                <div className="text-grayText text-[10px] text-center font-light my-4">
+                <div className="text-grayText text-[10px] text-center font-light mt-4 mb-2">
                   By submitting this form, you’re confirming that you agree to
-                  our Privacy Policy
+                  our <br />
+                  Privacy Policy
                 </div>
+                <a
+                  id={"waLink"}
+                  href="https://api.whatsapp.com/send/?phone=18106769485&text=Hi%2C+I+want+to+know+more+about+Dubai+Hills&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={whatsappChat}
+                    width={178}
+                    height={36}
+                    alt="whatapp bot"
+                  />
+                </a>
               </div>
             </div>
           </div>

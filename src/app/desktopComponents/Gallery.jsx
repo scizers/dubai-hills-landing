@@ -14,19 +14,6 @@ import img10 from "../../images/galleryDesktop/10.webp";
 import img11 from "../../images/galleryDesktop/11.webp";
 import img77 from "../../images/galleryDesktop/7.webp";
 import img12 from "../../images/galleryDesktop/12.webp";
-// import img1 from "../../images/gallery/1.webp";
-// import img2 from "../../images/gallery/2.webp";
-// import img3 from "../../images/gallery/3.webp";
-// import img4 from "../../images/gallery/4.webp";
-// import img5 from "../../images/gallery/5.webp";
-// import img6 from "../../images/gallery/6.webp";
-// import img7 from "../../images/gallery/7.jpg";
-// import img8 from "../../images/gallery/8.webp";
-// import img9 from "../../images/gallery/9.webp";
-// import img10 from "../../images/gallery/10.webp";
-// import img11 from "../../images/gallery/11.webp";
-// import img77 from "../../images/gallery/77.webp";
-// import img12 from "../../images/gallery/12.webp";
 
 const Gallery = () => {
   const [showGallery, setShowGallery] = useState(false);

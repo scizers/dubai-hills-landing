@@ -86,8 +86,6 @@ function ContactForm({ formName, setLoad, isLight }) {
     setLoad(true);
     try {
       let doc = await addForm(obj);
-      // let doc = obj;
-      // console.log("obj", doc);
       setLoad(false);
       let { ok } = doc;
       if (ok) {
@@ -159,7 +157,6 @@ function ContactForm({ formName, setLoad, isLight }) {
                   height: "50px",
                   borderRight: "0px solid #BFBFBF",
                 }}
-                // placeholder={"+91"}
                 preferredCountries={["ae", "in", "uk", "de", "ru", "sg", "us"]}
                 country={inputCountry}
                 onChange={(value, data) => {

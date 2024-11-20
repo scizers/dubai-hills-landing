@@ -1,5 +1,3 @@
-// components/PropertyList.js
-
 import React from "react";
 import Image from "next/image";
 import img1 from "../../images/apartments/1.png";

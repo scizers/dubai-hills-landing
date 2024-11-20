@@ -33,22 +33,22 @@ const Gallery = () => {
     { src: img11, alt: "Gallery Image 11" },
   ];
   const videoImages = [
-    { src: img1, alt: "Gallery Image 1" },
-    { src: img2, alt: "Gallery Image 2" },
-    { src: img3, alt: "Gallery Image 3" },
-    { src: img4, alt: "Gallery Image 4" },
-    { src: img5, alt: "Gallery Image 5" },
-    { src: img6, alt: "Gallery Image 6" },
+    { src: img1, isVideo: false, alt: "Gallery Image 1" },
+    { src: img2, isVideo: false, alt: "Gallery Image 2" },
+    { src: img3, isVideo: false, alt: "Gallery Image 3" },
+    { src: img4, isVideo: false, alt: "Gallery Image 4" },
+    { src: img5, isVideo: false, alt: "Gallery Image 5" },
+    { src: img6, isVideo: false, alt: "Gallery Image 6" },
     {
       src: img7,
       alt: "Gallery Image 7",
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/wcdGI7rqf4Y",
     },
-    { src: img8, alt: "Gallery Image 8" },
-    { src: img9, alt: "Gallery Image 9" },
-    { src: img10, alt: "Gallery Image 10" },
-    { src: img11, alt: "Gallery Image 11" },
+    { src: img8, isVideo: false, alt: "Gallery Image 8" },
+    { src: img9, isVideo: false, alt: "Gallery Image 9" },
+    { src: img10, isVideo: false, alt: "Gallery Image 10" },
+    { src: img11, isVideo: false, alt: "Gallery Image 11" },
   ];
 
   const handleImageClick = (index) => {
@@ -121,20 +121,6 @@ const Gallery = () => {
             className="relative flex-shrink-0 transition-all transform cursor-pointer"
             onClick={() => handleVideoClick(index)}
           >
-            {/* {image.isVideo ? (
-              <div className="relative w-[251px] h-[156px] bg-black rounded-xl">
-                <iframe
-                  width="251"
-                  height="156"
-                  src={image.videoUrl}
-                  title={image.alt}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-xl"
-                ></iframe>
-              </div>
-            ) : ( */}
             <Image
               src={image.src}
               alt={image.alt}
@@ -143,7 +129,6 @@ const Gallery = () => {
               objectFit="cover"
               className="rounded-xl"
             />
-            {/* )} */}
           </div>
         ))}
       </div>
@@ -205,7 +190,7 @@ const Gallery = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
           <button
             onClick={handleCloseGallery}
-            className="absolute p-2 top-4 right-4 "
+            className="absolute p-2 top-4 right-4"
           >
             <svg
               width="36"
@@ -225,13 +210,13 @@ const Gallery = () => {
             </svg>
           </button>
           <div className="relative w-[95%]">
-            <div className="relative ">
+            <div className="relative">
               {videoImages[selectedImage].isVideo ? (
-                <div className="relative w-full mx-auto ">
+                <div className="relative w-full mx-auto">
                   <iframe
                     width="410"
                     height="300"
-                    src={videoImages[selectedImage].videoUrl}
+                    src={`${videoImages[selectedImage].videoUrl}?autoplay=1`}
                     title={videoImages[selectedImage].alt}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -251,7 +236,7 @@ const Gallery = () => {
               )}
             </div>
 
-            <div className="absolute left-0 right-0 flex justify-between px-4 transform -translate-y-1/2 top-1/2">
+            <div className="absolute left-0 right-0 flex justify-between px-4 mt-4">
               <button
                 onClick={handlePrevImage}
                 className="p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
